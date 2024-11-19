@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAC,uBAAuB,CAAC,C","sources":["webpack://metalamp-search-for-hotel-rooms/./src/index.js"],"sourcesContent":["console.log('Приложение загружено!');\r\n"],"names":["console","log"],"sourceRoot":""}
