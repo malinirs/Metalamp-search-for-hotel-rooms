@@ -2,7 +2,8 @@
 Вёрстка страниц по поиску номеров в отеле.
 ## Установка и развертывание
 1. Клонирование репозитория: 
-``` git clone https://github.com/malinirs/Metalamp-search-for-hotel-rooms.git ```
+  ``` bash
+   git clone https://github.com/вашеимя/Metalamp-search-for-hotel-rooms.git   ```
 2. Перейдите в папку проекта:
    ```bash
    cd Metalamp-search-for-hotel-rooms
@@ -19,12 +20,10 @@
    ```bash
    npm start
    ```
-
 6. Откройте браузер и перейдите по адресу:
    ```
    http://localhost:8080
    ```
-
 ## Используемые библиотеки
 - [Webpack](https://webpack.js.org) - модульный бандлер для JavaScript.
 
