@@ -5,26 +5,31 @@ module.exports = {
   entry: './src/index.js', // точка входа
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist') // выходная папка
+    path: path.resolve(__dirname, 'dist'), // выходная папка
+    clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.js$/, // обработка JavaScript файлов
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'] // использование пресета Babel
+            presets: ['@babel/preset-env']
           }
         }
       },
       {
-        test: /\.css$/, // обработка CSS файлов
+        test: /\.html$/,
+        use: 'html-loader', 
+      },
+      {
+        test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|jpg|gif|svg)$/, // обработка изображений
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -38,10 +43,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // исходный HTML файл
-      filename: 'index.html', // имя выходного HTML файла
+      template: './src/ui-kit/colors-and-type.html', // исходный HTML файл
+      filename: 'colors-and-type.html', // имя выходного HTML файла
+      inject: true, // Вставляет bundle.js автоматически
     }),
   ],
-  devtool: 'source-map', // для отладки
-  mode: 'development', // режим разработки
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    port: 9000,
+    hot: true, // HMR. Обновление части приложения без полной перезагрузки
+    open: true, // Автоматически открывает браузер
+  },
 };
