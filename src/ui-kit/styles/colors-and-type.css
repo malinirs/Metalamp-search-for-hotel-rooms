@@ -1,18 +1,20 @@
-@import './global.css';
-
-/* body {
-  font-family: Montserrat, sans-serif;
-  font-size: 19px;
-  line-height: 1.5;
-  text-align: left;
-} */
-
-.colors {
+body {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
-.color {
+.colors {
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+
+  border: 5px yellow solid;
+
+  padding: 50px;
+  margin: 145px 0 0 150px;
+}
+
+.block-color {
   display: flex;
   align-items: center;
   margin: 10px 0;
@@ -24,12 +26,8 @@
   border-radius: 6px;
 }
 
-.color > p {
+.block-color > p {
   margin: 0 0 0 40px;
-  font-family: Montserrat, sans-serif;
-  font-size: 19px;
-  line-height: 1.5;
-  text-align: left;
 }
 
 .dark-shade-100 {
@@ -58,4 +56,33 @@
 
 .green {
   background-color: var(--green);
+}
+
+.types {
+  font-size: 14px;
+  margin: 0 auto;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+
+  border: 5px blue solid;
+}
+
+.block-type {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: right;
+  min-width: 50px;
+  color: var(--dark-shade-25);
+  margin-right: 30px;
+
+  border: 3px solid green;
+}
+
+.text {
+  text-align: left;
 }

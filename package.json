@@ -1,7 +1,7 @@
 {
   "name": "metalamp-search-for-hotel-rooms",
   "version": "1.0.0",
-  "description": "",
+  "description": "search for hotel rooms",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",

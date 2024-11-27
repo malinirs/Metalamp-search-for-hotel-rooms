@@ -29,31 +29,37 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]', // сохраняет путь и имена файлов
-            },
-          },
-        ],
+        test: /\.(png|jpg|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]', // Указываем путь сохранения
+        },
       },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]', // Сохраняем шрифты в папку fonts
+        },
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/ui-kit/colors-and-type.html', // исходный HTML файл
-      filename: 'colors-and-type.html', // имя выходного HTML файла
+      filename: 'index.html', // имя выходного HTML файла
       inject: true, // Вставляет bundle.js автоматически
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'dist'),
     },
     port: 9000,
     hot: true, // HMR. Обновление части приложения без полной перезагрузки
     open: true, // Автоматически открывает браузер
+    // historyApiFallback: {
+    //   index: '/colors-and-type.html', // Указываем файл для открытия
+    // },
   },
 };
