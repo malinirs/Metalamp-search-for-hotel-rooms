@@ -1,6 +1,11 @@
-body {
+.block {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 150px;
+  margin: auto;
+  max-width: 1920px;
+  min-width: 320px;
 }
 
 .colors {
@@ -8,26 +13,27 @@ body {
   display: flex;
   flex-direction: column;
 
-  border: 5px yellow solid;
+  /* border: 5px yellow solid; */
 
-  padding: 50px;
-  margin: 145px 0 0 150px;
+  padding: 0 50px;
+  margin: 0;
 }
 
 .block-color {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin-bottom: 6px;
 }
 
 .color-square {
   height: 70px;
   width: 70px;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .block-color > p {
-  margin: 0 0 0 40px;
+  margin-left: 40px;
+  font-size: 19px;
 }
 
 .dark-shade-100 {
@@ -60,12 +66,13 @@ body {
 
 .types {
   font-size: 14px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   max-width: 440px;
   display: flex;
   flex-direction: column;
 
-  border: 5px blue solid;
+  /* border: 5px blue solid; */
 }
 
 .block-type {
@@ -78,11 +85,13 @@ body {
   text-align: right;
   min-width: 50px;
   color: var(--dark-shade-25);
-  margin-right: 30px;
+  margin: 0 30px 0 0;
+  
 
-  border: 3px solid green;
+  /* border: 3px solid green; */
 }
 
 .text {
   text-align: left;
+  margin: 0;
 }

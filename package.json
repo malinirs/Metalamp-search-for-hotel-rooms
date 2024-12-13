@@ -18,6 +18,8 @@
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "node-sass": "^9.0.0",
+    "pug": "^3.0.3",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
     "webpack": "^5.96.1",
