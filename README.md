@@ -3,7 +3,7 @@
 ## Установка и развертывание
 1. Клонирование репозитория: 
    ``` bash
-   git clone https://github.com/вашеимя/Metalamp-search-for-hotel-rooms.git   
+   git clone https://github.com/malinirs/Metalamp-search-for-hotel-rooms.git
    ```
 2. Перейдите в папку проекта:
    ```bash
