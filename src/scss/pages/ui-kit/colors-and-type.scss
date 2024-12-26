@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use '../../base/_variables' as vars;
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 150px;
+  margin: auto;
+}
+
+.colors {
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  margin: 0;
+}
+
+.block-color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  p {
+    margin-left: 40px;
+    font-size: 19px;
+  }
+}
+
+.color-square {
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+@each $key, $value in vars.$colors {
+  .#{$key} {
+    background-color: $value;
+  }
+}
+
+.types {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-type {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: right;
+  min-width: 50px;
+  color: map.get(vars.$colors, "dark-shade-25");
+  margin: 0 30px 0 0;
+}
+
+.text {
+  text-align: left;
+  margin: 0;
+}

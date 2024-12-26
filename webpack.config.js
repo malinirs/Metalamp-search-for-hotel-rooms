@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js', // точка входа
+  entry: './src/js/main.js', // точка входа
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'), // выходная папка
@@ -32,14 +32,14 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/[name][ext]', // путь сохранения
+          filename: 'assets/[name][ext]',
         },
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]', // сохраняем шрифты в папку fonts
+          filename: 'fonts/[name][ext]',
         },
       },
       {
@@ -49,12 +49,15 @@ module.exports = {
           pretty: true, // делает HTML читаемым
         },
       },
+      {
+        test: /\.scss$/,
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      // template: './src/ui-kit/colors-and-type.html', // исходный HTML файл
-      template: './src/ui-kit/colors-and-type.pug',
+      template: './src/pug/pages/ui-kit/colors-and-type.pug',
       filename: 'index.html', // имя выходного HTML файла
       inject: true, // вставляет bundle.js автоматически
     }),
