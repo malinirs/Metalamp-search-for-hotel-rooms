@@ -3,7 +3,7 @@
 ## Установка и развертывание
 1. Клонирование репозитория: 
    ``` bash
-   git clone https://github.com/вашеимя/Metalamp-search-for-hotel-rooms.git   
+   git clone https://github.com/malinirs/Metalamp-search-for-hotel-rooms.git
    ```
 2. Перейдите в папку проекта:
    ```bash
@@ -23,7 +23,7 @@
    ```
 6. Откройте браузер и перейдите по адресу:
    ```
-   http://localhost:8080
+   http://localhost:9000
    ```
 ## Используемые библиотеки
 - [Webpack](https://webpack.js.org) - модульный бандлер для JavaScript.
