@@ -53,6 +53,13 @@ module.exports = {
         test: /\.scss$/,
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
+      {
+        test: /\.(png|ico|svg|xml|json)$/, // фавиконоки
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/favicons/[name][ext]', // папка для фавиконок в dist
+        },
+      },
     ],
   },
   plugins: [
