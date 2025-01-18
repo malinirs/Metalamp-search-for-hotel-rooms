@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../../base/_variables' as vars;
+@use '../base/_variables' as palette;
 
 .block {
   display: flex;
@@ -33,7 +33,7 @@
   border-radius: 5px;
 }
 
-@each $key, $value in vars.$colors {
+@each $key, $value in palette.$colors {
   .#{$key} {
     background-color: $value;
   }
@@ -57,7 +57,7 @@
 .title {
   text-align: right;
   min-width: 50px;
-  color: map.get(vars.$colors, "dark-shade-25");
+  color: map.get(palette.$colors, "dark-shade-25");
   margin: 0 30px 0 0;
 }
 

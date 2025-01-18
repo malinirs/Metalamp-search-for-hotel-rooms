@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/main.js', // точка входа
+  entry: './src/scripts/main.js', // точка входа
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'), // выходная папка
@@ -64,7 +64,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/pug/pages/ui-kit/colors-and-type.pug',
+      template: './src/pages/ui-kit.pug',
       filename: 'index.html', // имя выходного HTML файла
       inject: true, // вставляет bundle.js автоматически
     }),

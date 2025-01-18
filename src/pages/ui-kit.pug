@@ -1,11 +1,11 @@
-extends ../../layouts/layout.pug
+extends layouts/layout.pug
 
 block head
-  title Colors & Type
+  title Colors &amp; Type
 block content
   .block
     .colors
-      each color in squaresColored
+      each color in colorPalette
         .block-color
           .color-square(class=color.class)
           p
@@ -13,7 +13,7 @@ block content
             br
             span= color.hex
     .types
-      each type in types
+      each type in typography
         .block-type
           #{type.tag}(class="title")= type.name
           #{type.tag}(class="text")= type.example
