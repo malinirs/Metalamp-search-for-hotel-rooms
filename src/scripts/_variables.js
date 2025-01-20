@@ -9,7 +9,7 @@ module.exports = {
     { class: 'green', name: 'Green', hex: '#6FCF97' }
   ],
   
-  typography: [
+  typographyStyles: [
     { tag: 'h1', name: 'H1', example: 'This one is the sub-section or widget title' },
     { tag: 'h2', name: 'H2', example: 'Next one is the item title inside widgets' },
     { tag: 'h3', name: 'H3', example: 'THIS IS A LABEL OR CTA TEXT' },

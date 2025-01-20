@@ -3,17 +3,19 @@ extends layouts/layout.pug
 block head
   title Colors &amp; Type
 block content
-  .block
-    .colors
+  .color-and-type
+    .color-palette
       each color in colorPalette
-        .block-color
-          .color-square(class=color.class)
+        .color-item
+          .color-box(class=color.class)
           p
             b= color.name
             br
             span= color.hex
-    .types
-      each type in typography
-        .block-type
-          #{type.tag}(class="title")= type.name
-          #{type.tag}(class="text")= type.example
+    .typography
+      each type in typographyStyles
+        .typography-item
+          #{type.tag}(class="typography-title")= type.name
+          #{type.tag}(class="typography-text")= type.example
+  .form-elements
+    input(type=email)

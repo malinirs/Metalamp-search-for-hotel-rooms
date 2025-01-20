@@ -1,7 +1,15 @@
 @use 'sass:map';
 @use '../base/_variables' as palette;
 
-.block {
+.color-and-type, .form-elements {
+  border: 2px solid red;
+}
+.form-elements {
+  border: 2px solid rgb(38, 0, 255);
+}
+
+
+.color-and-type {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -9,7 +17,7 @@
   margin: auto;
 }
 
-.colors {
+.color-palette {
   font-size: 19px;
   display: flex;
   flex-direction: column;
@@ -17,7 +25,7 @@
   margin: 0;
 }
 
-.block-color {
+.color-item {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
@@ -27,7 +35,7 @@
   }
 }
 
-.color-square {
+.color-box {
   height: 70px;
   width: 70px;
   border-radius: 5px;
@@ -39,7 +47,7 @@
   }
 }
 
-.types {
+.typography{
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -48,20 +56,20 @@
   flex-direction: column;
 }
 
-.block-type {
+.typography-item {
   display: flex;
   align-items: baseline;
   margin-bottom: 50px;
 }
 
-.title {
+.typography-title {
   text-align: right;
   min-width: 50px;
   color: map.get(palette.$colors, "dark-shade-25");
   margin: 0 30px 0 0;
 }
 
-.text {
+.typography-text {
   text-align: left;
   margin: 0;
 }
