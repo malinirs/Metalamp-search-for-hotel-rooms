@@ -1,4 +1,7 @@
-- const variables = require('../scripts/_variables.js'); //- ! Путь относительно не layout.pug, а страницы используемой
+include ../../components/mixins/forms/inputFields.pug
+include ../../components/mixins/forms/selectFields.pug
+
+- const variables = require('../scripts/_variables.js'); //- ! путь рассчитывается относительно файла, в котором require выполняется, а не относительно файла, где require прописан
 - let colorPalette = variables.colorPalette;
 - let typographyStyles = variables.typographyStyles;
 

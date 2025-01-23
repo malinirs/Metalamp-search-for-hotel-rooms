@@ -1,0 +1,7 @@
+mixin inputFields(type="text", name="text", placeholder="", required=false, textField="Text Field")
+  label
+    | #{textField}
+    if required
+      input(type=type, name=name, placeholder=placeholder, required=required)
+    else
+      input(type=type, name=name, placeholder=placeholder)

@@ -17,5 +17,8 @@ block content
         .typography-item
           #{type.tag}(class="typography-title")= type.name
           #{type.tag}(class="typography-text")= type.example
+          
   .form-elements
-    input(type=email)
+    form
+      +inputFields("email", "email", "Email", true)
+      +selectFields("", "Сколько гостей")

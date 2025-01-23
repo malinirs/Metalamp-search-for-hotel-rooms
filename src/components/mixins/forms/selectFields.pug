@@ -1,0 +1,7 @@
+mixin selectFields(name, textField="Dropdown", required=false)
+  label
+    | #{textField}
+    select(name=name, required=required)
+      option(value="adults") Взрослые
+      option(value="children") Дети
+      option(value="babies") Младенцы
