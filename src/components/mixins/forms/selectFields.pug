@@ -1,7 +1,8 @@
-mixin selectFields(name, textField="Dropdown", required=false)
-  label
-    | #{textField}
-    select(name=name, required=required)
+mixin selectFields(name="guests", textField="Dropdown", required=false)
+  .form-group
+    label.form-label #{textField}
+    select.border-field(name=name, required=required)
+      option.hidden(disabled selected) Сколько гостей
       option(value="adults") Взрослые
       option(value="children") Дети
       option(value="babies") Младенцы

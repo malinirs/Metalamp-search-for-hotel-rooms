@@ -1,7 +1,4 @@
-mixin inputFields(type="text", name="text", placeholder="", required=false, textField="Text Field")
-  label
-    | #{textField}
-    if required
-      input(type=type, name=name, placeholder=placeholder, required=required)
-    else
-      input(type=type, name=name, placeholder=placeholder)
+mixin inputFields(type="email", name="email", placeholder="Email", required=false, textField="Text Field")
+  .form-group
+    label.form-label #{textField}
+    input.border-field(type=type, name=name, placeholder=placeholder, required=required)
