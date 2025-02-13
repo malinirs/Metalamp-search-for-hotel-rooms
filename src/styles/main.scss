@@ -1,10 +1,10 @@
 // Базовые стили
-@use './base/_global.scss';
-@use './base/_variables.scss';
-@use './components/forms/_forms.scss';
+@use './_global.scss';
+@use './_variables.scss';
+@use '../components/forms/forms.scss';
 
 
 // Общие миксины (если есть)
 
 // Стили страниц
-@use './pages/_ui-kit.scss';
+@use './_ui-kit.scss';

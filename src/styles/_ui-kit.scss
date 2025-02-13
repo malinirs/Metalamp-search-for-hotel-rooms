@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../base/_variables' as palette;
+@use './_variables' as palette;
 
 .color-and-type, .form-elements {
   border: 2px solid red;
@@ -7,7 +7,6 @@
 .form-elements {
   border: 2px solid rgb(38, 0, 255);
 }
-
 
 .color-and-type {
   display: flex;
