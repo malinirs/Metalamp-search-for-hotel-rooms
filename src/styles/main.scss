@@ -2,9 +2,10 @@
 @use './_global.scss';
 @use './_variables.scss';
 @use '../components/forms/forms.scss';
+@use './colors-and-type.scss';
 
 
 // Общие миксины (если есть)
 
 // Стили страниц
-@use './_ui-kit.scss';
+@use './pages/_ui-kit.scss';

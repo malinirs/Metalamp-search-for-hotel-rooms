@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/scripts/main.js', // точка входа
@@ -54,7 +55,7 @@ module.exports = {
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
       {
-        test: /\.(png|ico|svg|xml|json)$/, // фавиконоки
+        test: /\.(png|ico|svg|xml|json|webmanifest)$/, // фавиконоки
         type: 'asset/resource',
         generator: {
           filename: 'assets/favicons/[name][ext]', // папка для фавиконок в dist
@@ -67,6 +68,11 @@ module.exports = {
       template: './src/pages/ui-kit.pug',
       filename: 'index.html', // имя выходного HTML файла
       inject: true, // вставляет bundle.js автоматически
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets/favicons/site.webmanifest', to: 'assets/favicons/' }
+      ]
     }),
   ],
   devServer: {
