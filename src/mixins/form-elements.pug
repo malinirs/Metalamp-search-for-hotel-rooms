@@ -1,13 +1,13 @@
-mixin inputFields(type="email", name="email", placeholder="Email", required=false, textField="Text Field")
+mixin inputField(type="email", name="email", placeholder="Email", required=false, textField="Text Field")
   .form-group
     label.form-label #{textField}
     input.border-field(type=type, name=name, placeholder=placeholder, required=required)
 
-mixin selectFields(name="guests", textField="Dropdown", required=false)
+mixin selectDropdown(name, textField="Dropdown", options, first, second, third)
   .form-group
     label.form-label #{textField}
-    select.border-field(name=name, required=required)
-      option.hidden(disabled selected) Сколько гостей
-      option(value="adults") Взрослые
-      option(value="children") Дети
-      option(value="babies") Младенцы
+    select.select-field(name, required=true)
+      option.hidden-option(disabled selected) #{options}
+      +selectOption("first", first)
+      +selectOption("second", second)
+      +selectOption("third", third)

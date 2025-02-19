@@ -17,7 +17,7 @@ form {
   font-size: 12px;
 }
 
-.border-field {
+.select-field {
   all: unset;
   width: 100%;
   box-sizing: border-box;
@@ -32,15 +32,15 @@ form {
   align-items: center;
 }
 
-.border-field:hover, .border-field:focus {
+.select-field:hover, .select-field:focus {
   border-color: rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.75);
 }
 
-.hidden {
+.hidden-option {
   display: none;
 }
 
-.arrow-down {
-  border: 2px solid rgb(233, 53, 179);
-}
+// .arrow-down {
+//   border: 2px solid rgb(233, 53, 179);
+// }

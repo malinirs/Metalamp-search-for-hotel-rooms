@@ -20,6 +20,7 @@ block content
           
   .form-elements
     form
-      +inputFields()
-      +selectFields()
-      +inputFields("email", "email", "Email", true)
+      +inputField()
+      +selectDropdown("guests", "Количество гостей", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
+      +selectDropdown("rooms", "Удобство номера", "", "Спальни", "Кровати", "Ванные комнаты")
+      
