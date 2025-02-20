@@ -17,7 +17,7 @@ form {
   font-size: 12px;
 }
 
-.select-field {
+.field-container {
   all: unset;
   width: 100%;
   box-sizing: border-box;
@@ -30,17 +30,15 @@ form {
   font-size: inherit;
   display: flex;
   align-items: center;
+
+  &:hover, &:focus {
+    border-color: rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75);
+  }
 }
 
-.select-field:hover, .select-field:focus {
-  border-color: rgba(31, 32, 65, 0.5);
-  color: rgba(31, 32, 65, 0.75);
+img {
+  height: 24px;
+  width: 24px;
+  // text-align: center;
 }
-
-.hidden-option {
-  display: none;
-}
-
-// .arrow-down {
-//   border: 2px solid rgb(233, 53, 179);
-// }

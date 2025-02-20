@@ -1,13 +1,19 @@
-mixin inputField(type="email", name="email", placeholder="Email", required=false, textField="Text Field")
+mixin inputField(type="email", name="email", placeholder="Email", required=false, labelName="Text Field")
   .form-group
-    label.form-label #{textField}
-    input.border-field(type=type, name=name, placeholder=placeholder, required=required)
+    label.form-label #{labelName}
+    input.field-container(type=type, name=name, placeholder=placeholder, required=required)
 
-mixin selectDropdown(name, textField="Dropdown", options, first, second, third)
+mixin selectDropdown(name, labelName="Dropdown", options, first, second, third)
   .form-group
-    label.form-label #{textField}
-    select.select-field(name, required=true)
-      option.hidden-option(disabled selected) #{options}
-      +selectOption("first", first)
-      +selectOption("second", second)
-      +selectOption("third", third)
+    .form-label #{labelName}
+    .field-container(name=name)
+      .dropdown-field(data-value=options) #{options}
+      button.dropdown-icon
+        //- img(src="/assets/images/expand_more.jpg")
+        img(src=require("../assets/images/expand_more.jpg"))
+      .dropdown-menu
+        +selectOption("first", first)
+        +selectOption("second", second)
+        +selectOption("third", third)
+
+
