@@ -1,6 +1,6 @@
 mixin selectOption(value, text)
   .dropdown-item(data-value=value)
-    span.text #{text}
-    button.minus -
-    span.count 0
-    button.plus +
+    span.dropdown-item__text #{text}
+    button.dropdown-item__button-minus(type="button") -
+    span.dropdown-item__count 0
+    button.dropdown-item__button-plus(type="button") +

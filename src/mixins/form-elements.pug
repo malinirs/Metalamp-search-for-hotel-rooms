@@ -8,8 +8,7 @@ mixin selectDropdown(name, labelName="Dropdown", options, first, second, third)
     .form-label #{labelName}
     .field-container(name=name)
       .dropdown-field(data-value=options) #{options}
-      button.dropdown-icon
-        //- img(src="/assets/images/expand_more.jpg")
+      button.dropdown-icon(type="button")
         img(src=require("../assets/images/expand_more.jpg"))
       .dropdown-menu
         +selectOption("first", first)
