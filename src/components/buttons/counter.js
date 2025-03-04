@@ -6,8 +6,10 @@ buttons.forEach(button => {
     let count = parent.querySelector('.dropdown-item__count');
     let countValue = parseInt(count.innerHTML);
 
-    if (button.classList.contains("dropdown-item__button-minus") && countValue > 0) {
-      count.innerHTML = countValue - 1;
+    if (button.classList.contains("dropdown-item__button-minus")) {
+      if (countValue > 0) {
+        count.innerHTML = countValue - 1;
+      }
     } else {
       count.innerHTML = countValue + 1;
     }
